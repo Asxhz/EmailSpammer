@@ -23,9 +23,9 @@ def email_alert(content, to):
   server.login(user, password)
   
   if addimage=='yes'|'y':
-  with open('img.jpg', 'rb') as content_file:
-    content = content_file.read()
-    msg.add_attachment(content, maintype='application', subtype='jpg', filename='img.jpg')
+    with open('img.jpg', 'rb') as content_file:
+      content = content_file.read()
+      msg.add_attachment(content, maintype='application', subtype='jpg', filename='img.jpg')
 
   server.send_message(msg)
 
