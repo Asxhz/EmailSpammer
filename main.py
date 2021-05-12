@@ -4,6 +4,8 @@ import random
 import smtplib
 from email.message import EmailMessage
 
+amount = input('How many messages to send (enter loop to send infinite): ')
+
 def email_alert(content, to):
   msg = EmailMessage()
   msg.set_content(content)
@@ -26,6 +28,18 @@ def email_alert(content, to):
   server.quit()
 
 users = ["Email"]
+
+if(type(amount)=='int'){
+  while i > amount:
+    time.sleep(0.25)
+    print("sent to: ", random.choice(users))
+    email_alert("Message", random.choice(users))
+} else {
+  print('you either typed loop or left the message count number blank, Sending infinite messages.')
+  while True:
+    time.sleep(0.25)
+    print("sent to: ", random.choice(users))
+    email_alert("Message", random.choice(users))
 
 while True:
   time.sleep(0.25)
