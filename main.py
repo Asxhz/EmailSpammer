@@ -33,15 +33,15 @@ def email_alert(content, to):
 
 users = ["Email"]
 
-if type(amount)=='int':
-  while i > amount:
-    time.sleep(0.25)
-    print("sent to: ", random.choice(users))
-    email_alert(message, random.choice(users))
-else:
+if amount=='loop'|null|'':
   print('you either typed loop or left the message count number blank, or typed an invalid answer. Sending infinite messages.')
   while True:
     time.sleep(0.25)
-    print("sent to: ", random.choice(emails))
-    email_alert(message, random.choice(emails))
+    print("sent to: ", emails)
+    email_alert(message, emails)
+else:
+  while i > amount:
+    time.sleep(0.25)
+    print("sent to: ", emails)
+    email_alert(message, emails)
 
