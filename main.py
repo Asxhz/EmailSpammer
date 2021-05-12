@@ -33,7 +33,7 @@ def email_alert(content, to):
 
 users = ["Email"]
 
-if amount=='loop'|null|'':
+if amount=='loop'|'':
   print('you either typed loop or left the message count number blank, or typed an invalid answer. Sending infinite messages.')
   while True:
     time.sleep(0.25)
